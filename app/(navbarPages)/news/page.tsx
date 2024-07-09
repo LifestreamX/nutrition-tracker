@@ -4,6 +4,7 @@ import Image from 'next/image';
 //@ts-ignore
 import NewsAPI from 'newsapi';
 import Articles from './Articles';
+import prisma from '@/app/lib/prisma';
 
 export const metadata: Metadata = {
   title: 'News',
@@ -90,27 +91,29 @@ async function getNewsData() {
         short_description: article.description,
       })
     );
+
+    // DB PRIMSA
   } catch (error) {
     console.error(error);
   }
 }
 
-// :
-// date
-// :
-// "Friday, May 31, 2024 2:37AM"
-// short_description
-// :
-// null
-// title
-// :
-// "Covid-19 will make you stupid - Thaiger"
-// top_image
-// :
-// null
-// url
-// :
-// "https://thethaiger.com/coronavirus/covid-19-will-make-you-stupid"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const News = async () => {
   const data = await getNewsData();
