@@ -89,7 +89,7 @@ const Articles: React.FC<ArticlesProps> = ({ filteredArticles }) => {
               <p className='text-gray-700 mb-12 text-lg'>
                 {article.short_description}
               </p>
-              {/* Likes & Dislikes  */}
+              {/* Likes & Dislikes 
               <div className='flex w-full justify-end relative top-14 '>
                 <div className='flex mx-6 justify-center items-center'>
                   <svg
@@ -131,7 +131,7 @@ const Articles: React.FC<ArticlesProps> = ({ filteredArticles }) => {
                   </svg>
                   <p>{article.dislikes}</p>
                 </div>
-              </div>
+              </div> */}
               {/* Date & LInk */}
               <div className=' '>
                 <p className='text-gray-'>{article.date}</p>
