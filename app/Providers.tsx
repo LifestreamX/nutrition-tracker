@@ -21,7 +21,10 @@ const ThemeSync = () => {
 
           if (res.ok) {
             const themePreference = await res.text();
-            if (themePreference && (themePreference === 'dark' || themePreference === 'light')) {
+            if (
+              themePreference &&
+              (themePreference === 'dark' || themePreference === 'light')
+            ) {
               setTheme(themePreference);
             }
           }
