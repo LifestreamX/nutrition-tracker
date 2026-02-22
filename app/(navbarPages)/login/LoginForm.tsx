@@ -130,7 +130,10 @@ const LoginForm = (): JSX.Element => {
   let buttonSize = width < 768 ? 'medium' : 'large';
 
   let messageColor =
-    message === 'Signing In...' ? 'text-black dark:text-white' : 'text-red-600';
+      message === 'Signing In...' ? 'text-black dark:text-white' : 'text-red-600';
+
+    // Only show error for credentials login, not Google
+    const showError = message && message !== 'Signing In...' && googleClicked;
 
   return (
     <form
@@ -188,15 +191,19 @@ const LoginForm = (): JSX.Element => {
             </div>
           </div>
           <div
-            className={`relative top-8 ${messageColor} flex justify-center flex-col items-center `}
-          >
-            <p className=' md:top-4 relative text:lg md:text-xl font-semibold'>
-              {message}
-            </p>
-            <p className='md:top-10 text-red-600 relative text:lg md:text-xl font-semibold text-center'>
-              {loginTimeOutMessage}
-            </p>
-          </div>
+              className={`relative top-8 flex justify-center flex-col items-center `}
+            >
+              {showError && (
+                <p className='md:top-4 relative text:lg md:text-xl font-semibold text-red-600'>
+                  {message}
+                </p>
+              )}
+              {loginTimeOutMessage && (
+                <p className='md:top-10 text-red-600 relative text:lg md:text-xl font-semibold text-center'>
+                  {loginTimeOutMessage}
+                </p>
+              )}
+            </div>
         </div>
         <div className='md:flex md:items-center mb-6 flex-col'>
           <span className='flex mt-3'>{/* error would go here  */}</span>
