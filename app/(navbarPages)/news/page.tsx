@@ -66,7 +66,7 @@ function formatDate(isoDateString: string): string {
 }
 
 async function getNewsData() {
-  const newsapi = new NewsAPI('a1ff8b8af6db41ea83f41bc015655d5c');
+  const newsapi = new NewsAPI(process.env.NEXT_PUBLIC_NEWS_API_KEY);
 
   try {
     const response = await newsapi.v2.topHeadlines({
@@ -97,23 +97,6 @@ async function getNewsData() {
     console.error(error);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const News = async () => {
   const data = await getNewsData();

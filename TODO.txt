@@ -1,0 +1,90 @@
+
+
+
+ CURRENT TASK:
+
+
+      TODO: Dark mode broken fix (after holiday hub is finished)
+
+
+ 
+
+--------------------------------------------------------------------------------------------
+
+      TODO: forgot password reset 
+
+      TODO: News Page: 
+                        
+                        - Article api rout handler for PPOST and GET articles from database 
+                        - News page getting articles from database and displaying them 
+                        - Like Button 
+                        - dislike Button 
+                        - comment section
+                        - delete oldest articles when it gets past certain number of arciles 
+                        - only likes and dislikes for signed in users and limit to 1 
+                        - only allow comments from signed in users and limit to 1
+
+
+
+      TODO: Payment option - 1 time payment / Subscription / Donate?
+
+
+      TODO: Chatbot input in darkmode issue
+
+      TODO: Workout exercise page?
+
+      TODO: Add custom food macro  input for if food isnt there 
+
+      TODO: Buttons widths
+
+      TODO: Invalid when sighing in with google
+
+      TODO: Macrotargets 0 input issue
+
+      TODO: any types Fix
+
+      TODO: Delete account
+
+      TODO: push to real domain with my domain
+
+      TODO: server testing
+
+      TODO: Email confirm?
+
+      TODO: server typescript 
+
+      TODO: Server actions and server component fetching over route handlers?
+
+      TODO: add password change in settings
+
+      TODO: Verification link on sing up?
+
+      TODO: Testing code - all 3 types: Docs
+
+      TODO: Warnings in console 
+
+      TODO: Break down into smaller contexts instead of one / maybe custom hooks
+
+      TODO: Use search params for url instead of usestate
+
+      TODO: Parallel Routes / Intercepting Routes?
+
+      TODO: use useCallback Hook
+
+      TODO: use useMemo / React Memo
+
+      TODO: useOptimistic 
+
+      TODO: useSearchParams for searching over usestate keep history url
+
+
+
+
+
+
+
+
+
+
+
+

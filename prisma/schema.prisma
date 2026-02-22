@@ -20,6 +20,17 @@ model User {
   selectedDate      String?
   foodLogs          FoodLog[] // Define a one-to-many relation between User and FoodLog
   submittedFoodLogs SubmittedFoodLog[]
+  resetTokens       PasswordResetToken[]
+
+}
+
+model PasswordResetToken {
+  id         String   @id @default(cuid())
+  token      String   @unique
+  user       User     @relation(fields: [userId], references: [id])
+  userId     String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
 }
 
 model MacroTargets {
@@ -69,17 +80,17 @@ model SubmittedFoodLog {
 }
 
 
-model Article {
-  id          String   @id @default(cuid())
-  title       String
-  url         String   @unique
-  topImage    String?
-  publishedAt DateTime
-  description String?
-  likes       Int      @default(0)
-  dislikes    Int      @default(0)
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-}
+// model Article {
+//   id          String   @id @default(cuid())
+//   title       String
+//   url         String   @unique
+//   topImage    String?
+//   publishedAt DateTime
+//   description String?
+//   likes       Int      @default(0)
+//   dislikes    Int      @default(0)
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+// }
 
 
